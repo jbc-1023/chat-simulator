@@ -1,0 +1,23 @@
+.tos_container{
+    display: grid;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    color: var(--theme_grey);
+    margin-bottom: 100vh;
+}
+
+.tos_container .tldr {
+    display: grid;
+    margin-top: 40vh;
+    margin-bottom: 60vh;
+    font-size: 1.5em;
+}
+
+.tos_container .tldr .scroll {
+    font-size: 0.7em;
+}
+
+.tos_container ol{
+    margin-left: 5vw;
+}

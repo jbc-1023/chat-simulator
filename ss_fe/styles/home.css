@@ -1,0 +1,10 @@
+.profile_gear{
+    position: fixed;
+    right: 0;
+    top: 7vh;
+    height:6vh;
+    background-color: white;
+    border-radius: 1em 0 0 1em;
+    z-index: 1;
+    box-shadow: 0 0 0.4em 0.1em black
+}

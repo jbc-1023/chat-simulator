@@ -1,0 +1,271 @@
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Vertical                                                                                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (orientation: portrait ){
+    .main_user_container .user_info_container .user_pfp{
+        display: grid;
+        width: 50vw;
+        height: 50vw;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-top: 10vh;
+        margin-left: 25vw;
+        margin-right: 25vw
+    }
+
+    .main_user_container .user_info_container .user_name{
+        display: grid;
+        color: var(--theme_yellow);
+        font-size: 1.5em;
+        margin-top: 3vh;
+        justify-content: center;
+
+    }
+
+    .main_user_container .single_story_container_user .story_pic{
+        display: grid;
+        grid-area: storypic;
+        justify-content: end;
+    }
+
+    .main_user_container .single_story_container_user .story_pic img{
+        height: 7.2222222222vh;
+        width: 64vw;
+
+        object-fit: cover;
+        border: 0.1em solid var(--theme_dark_grey);
+        border-radius: 1em;
+    }
+
+    .main_user_container .single_story_container_user .title{
+        display: grid;
+        grid-area: title;
+        color: var(--theme_grey);
+        font-size: 1.5em;
+        width: 90vw;
+        text-decoration: none;
+    }
+
+    .main_user_container .single_story_container_user .tags_container_outer {
+        display: grid;
+        grid-area: tags
+    }
+
+    .main_user_container .single_story_container_user .tags_container_inner {
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+
+    .main_user_container .single_story_container_user .tags_container_inner .tag{
+        background-color: var(--theme_pink);
+        margin-left: 0;
+        margin-right: 0;
+        line-height: 4vh;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
+        color: var(--theme_grey);
+        border-radius: 0.5em;
+
+    }
+
+    .main_user_container .single_story_container_user{
+        display: grid;
+        grid-template:
+            "title title"
+            "views storypic"
+            "likes storypic"
+            ". tags";
+        justify-content: start;
+        background-color: transparent;
+        margin-left: 5vw;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        border-bottom: 0.1em solid var(--theme_dark_grey);
+        row-gap: 1vh;
+    }
+
+    .main_user_container .single_story_container_user .views_container,
+    .main_user_container .single_story_container_user .likes_container {
+        display: grid;
+        grid-template-columns: auto auto;
+        position: relative;
+        width: 10vw;
+        column-gap: 2vw;
+    }
+
+    .main_user_container .single_story_container_user .views_container {
+        grid-area: views;
+    }
+
+    .main_user_container .single_story_container_user .likes_container {   
+        grid-area: likes;
+    }
+
+    .main_user_container .single_story_container_user .views_container .count,
+    .main_user_container .single_story_container_user .likes_container .count {
+        display: grid;
+        background-color: var(--theme_grey);
+        width: fit-content;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        align-content: center;
+        border-radius: 1em;
+        
+    }
+
+    .main_user_container .single_story_container_user .views_container img,
+    .main_user_container .single_story_container_user .likes_container img {
+        width: 10vw;
+    }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Horizontal                                                                                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (orientation: landscape ){
+    .main_user_container{
+        display: grid;
+        width: 50vw;
+        margin-left: 25vw;
+        margin-right: 25vw;
+        box-shadow: 0 0.4em 2em black;
+    }
+
+    .main_user_container .user_info_container{
+        width: 50vw;
+    }
+
+    .main_user_container .user_info_container .user_pfp{
+        display: grid;
+        width: 10vw;
+        height: 10vw;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-top: 10vh;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .main_user_container .user_info_container .user_name{
+        display: grid;
+        color: var(--theme_yellow);
+        font-size: 3em;
+        margin-top: 3vh;
+        justify-content: center;
+
+    }
+
+    .main_user_container .single_story_container_user{
+        display: grid;
+        grid-template:
+            "title title"
+            "views storypic"
+            "likes storypic"
+            ". tags";
+        justify-content: start;
+        background-color: transparent;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        border-bottom: 0.1em solid var(--theme_dark_grey);
+        row-gap: 1vh;
+        width: 50vw;
+    }
+
+    .main_user_container .single_story_container_user .story_pic{
+        display: grid;
+        grid-area: storypic;
+        justify-content: end;
+    }
+
+    .main_user_container .single_story_container_user .story_pic img{
+        height: 7.2222222222vh;
+        width: 34vw;
+
+        object-fit: cover;
+        border: 0.1em solid var(--theme_dark_grey);
+        border-radius: 1em;
+        margin-right: 2vw
+    }
+
+    .main_user_container .single_story_container_user .title{
+        display: grid;
+        grid-area: title;
+        color: var(--theme_grey);
+        font-size: 1.5em;
+        width: 40vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        text-decoration: none;
+    }
+
+    .main_user_container .single_story_container_user .tags_container_outer {
+        display: grid;
+        grid-area: tags
+    }
+
+    .main_user_container .single_story_container_user .tags_container_inner {
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+
+    .main_user_container .single_story_container_user .tags_container_inner .tag{
+        background-color: var(--theme_pink);
+        color: var(--theme_grey);
+        margin-left: 0.5vw;
+        margin-right: 0.5vw;
+        padding-left: 0.5vw;
+        padding-right: 0.5vw;
+        padding-top: 0.5vw;
+        padding-bottom: 0.5vw;
+        border-radius: 0.5em;
+        font-size: 1.5em;
+    }
+
+    .main_user_container .single_story_container_user .views_container,
+    .main_user_container .single_story_container_user .likes_container {
+        display: grid;
+        grid-template-columns: auto auto;
+        position: relative;
+        width: 10vw;
+        left: 1vw;
+        column-gap: 1vw;
+
+    }
+
+    .main_user_container .single_story_container_user .views_container {   
+        top: 3vh;
+    }
+
+    .main_user_container .single_story_container_user .likes_container {   
+        top: 5vh;
+    }
+
+    .main_user_container .single_story_container_user .views_container .count,
+    .main_user_container .single_story_container_user .likes_container .count {
+        display: grid;
+        background-color: var(--theme_grey);
+        width: fit-content;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        align-content: center;
+        border-radius: 1em;
+        font-size: 1.5em;
+        
+    }
+
+    .main_user_container .single_story_container_user .views_container img,
+    .main_user_container .single_story_container_user .likes_container img {
+        width: 4vw;
+    }
+}

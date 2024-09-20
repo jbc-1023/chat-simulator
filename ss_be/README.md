@@ -1,0 +1,14 @@
+## Infos
+
+# .env
+
+```
+MYSQL_HOST = ''
+MYSQL_PORT = ''
+MYSQL_USERNAME = ''
+MYSQL_PASSWORD = ''
+MYSQL_DATABASE = ''
+JWT_KEY = ""
+TOKEN_EXPIRE_SECONDS = "86400"
+SENDGRID_API_KEY = ""
+```

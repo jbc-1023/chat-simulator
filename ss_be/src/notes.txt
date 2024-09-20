@@ -1,0 +1,37 @@
+---------------------------------------------------------
+CSS
+---------------------------------------------------------
+Main color: #de096a
+
+---------------------------------------------------------
+DATABASE
+---------------------------------------------------------
+item_type:
+
+    - Value: Story ID 1st generate
+      Description: Have a place to put story_id when first create a blank story
+
+    - Value: Title
+      Description: The display title of the story
+
+    - Value: Message text
+      Description: A line of message
+
+      - meta_data
+        Description: A CSV of meta data info 
+      
+      - payload
+        Description: "P1" or "P2" ...
+
+    - Value: Tags
+      Description: Tags the story has in CSV
+
+    - Value: PFP
+      Description: Profile pic image file
+
+      - meta_data
+        Description: "P1" or "P2" or ...
+
+      - payload
+        Description: The image file name
+

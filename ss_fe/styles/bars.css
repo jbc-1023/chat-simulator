@@ -1,0 +1,127 @@
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Vertical                                                                                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (orientation: portrait ){
+    .top_bar_container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+
+        width: 100vw;
+        justify-items: center;
+
+        background-color:var(--theme_blue);
+        color:var(--theme_grey);
+
+        padding: 1vh;
+
+        position: fixed;
+        top:0;
+
+        box-shadow: 0 0.4em 2em black;
+
+        z-index: 101;
+    }
+
+    .top_bar_container a{
+        text-decoration: none;
+        color:var(--theme_grey);
+    }
+
+    .top_bar_container a:visited{
+        text-decoration: none;
+        color:var(--theme_grey);
+    }
+
+    .bottom_bar_container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+
+        width: 100%;
+        justify-items: center;
+        background-color: black;
+        color: var(--theme_blue);
+        padding: 1vh;
+        position: fixed;
+        bottom: 0;
+        box-shadow: 0 0.4em 2em black;
+        z-index: 100;
+    }
+
+    .bottom_bar_container a{
+        text-decoration: none;
+        color: var(--theme_blue);
+    }
+
+    .bottom_bar_container,
+    .bottom_bar_container a{
+        font-size: 1em;
+    }
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Horizontal                                                                                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (orientation: landscape ){
+    .top_bar_container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+
+        width: 100vw;
+        justify-items: center;
+
+        background-color:var(--theme_blue);
+        color:var(--theme_grey);
+
+        padding: 1vh;
+
+        position: fixed;
+        top:0;
+
+        box-shadow: 0 0.4em 2em black;
+
+        z-index: 101;
+    }
+
+    .top_bar_container a{
+        text-decoration: none;
+        color:var(--theme_grey);
+    }
+
+    .top_bar_container a:visited{
+        text-decoration: none;
+        color:var(--theme_grey);
+    }
+
+    .bottom_bar_container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+
+        width: 100%;
+        justify-items: center;
+        background-color: black;
+        color: var(--theme_blue);
+        padding: 1vh;
+        position: fixed;
+        bottom: 0;
+        box-shadow: 0 0.4em 2em black;
+        z-index: 100;
+    }
+
+    .bottom_bar_container a{
+        text-decoration: none;
+        color: var(--theme_blue);
+    }
+
+    .bottom_bar_container,
+    .bottom_bar_container a{
+        font-size: 1em;
+    }
+}

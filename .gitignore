@@ -1,0 +1,5 @@
+ss_be/.env
+ss_fe/public/images/*
+ss_be/upload_files/*
+ss_fe/defaults.js
+media/m/*

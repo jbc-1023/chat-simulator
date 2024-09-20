@@ -1,0 +1,617 @@
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Vertical                                                                                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (orientation: portrait ){
+    .comments_container{
+        position: fixed;
+        width: 100vw;
+        height: 80vh;
+        z-index: 100;
+        background-color: var(--theme_grey);
+        transition: var(--msg_box_transition);
+        border-radius: 1em 1em 0 0;
+        padding-top: 2vh;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        bottom: -100vh;
+    }
+    .comments_container .add_comment{
+        display: grid;
+        grid-template-areas: 
+            "comment_text comment_text"
+            "btn_close btn_send";
+        margin-bottom: 5vh;
+        column-gap: 15vw;
+    }
+
+    .comments_container .add_comment .new_comment {
+        display: grid;
+        grid-area: comment_text;
+        width: 100%;
+        border-radius: 1em;
+        padding: 2vw;
+        font-size: 1.1em;
+        border: 0.2em dashed var(--theme_pink);
+        color: var(--theme_pink);
+        background-color: var(--theme_light_grey);
+    }
+
+    .comments_container .add_comment .btn_send,
+    .comments_container .add_comment .btn_close {
+        display: grid;
+        border: 0.2em dashed var(--theme_pink);
+        margin-top: 1vh;
+        justify-content: center;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        border-radius: 1em;
+        color: var(--theme_pink);
+    }
+
+    .comments_container .add_comment .btn_send{
+        grid-area: btn_send;
+    }
+
+    .comments_container .add_comment .btn_close{
+        grid-area: btn_close;
+    }
+
+    .comments_container .comment_list {
+        display: grid;
+        row-gap: 1vh;
+
+        overflow-y: auto;
+        height: fit-content;
+        max-height: 70%;
+        margin-bottom: 1.5vh;
+        overflow-x: clip;
+    }
+
+    .comments_container .comment_list .single_comment_container {
+        position: relative;
+        border-bottom: 0.2em solid var(--theme_dark_grey);
+        border-radius: 1em;
+        padding-bottom: 4vh;
+        height: fit-content;       /* TODO Firefox incompatible */
+        height: -moz-fit-content;  /* TODO Firefox works? */
+    }
+
+    .comments_container .comment_list .single_comment_container .commenter_pfp{
+        position: absolute;
+        top: 0.4em;
+        left: 0.4em;
+
+        width: 10vw;
+        height: 10vw;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .comments_container .comment_list .single_comment_container .commenter_username{
+        position: absolute;
+        top: 0.4em;
+        left: 0.4em;
+
+        width: fit-content;
+        margin-left: 15vw;
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
+        padding-left: 1.5vw;
+        padding-right: 1.5vw;
+        border-radius: 0.5em;
+
+        background-color: var(--theme_dark_grey);
+    }
+
+    .comments_container .comment_list .single_comment_container .OP{
+        position: absolute;
+        top: 0.4vh;
+        left: 0;
+        font-size: 0.7em;
+        background-color: var(--theme_pink);
+        color: var(--theme_grey);
+        padding: 0.1em;
+        border-radius: 0.3em;
+
+        z-index: 1;
+
+    }
+
+    .comments_container .comment_list .single_comment_container .comment_remove{
+        position: absolute;
+        top: 0.4em;
+        right: 0.4em;
+
+        width: 5vw;
+        border-radius: 50%;
+
+    }
+
+    .comments_container .comment_list .single_comment_container .comment_bar{
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        position: absolute;
+        width: 115%;
+        justify-content:center;
+        column-gap: 3vw;
+    }
+
+
+    .comments_container .comment_list .single_comment_container .comment_text {
+        margin-left: 17vw;
+        margin-right: 6.5vw;
+        margin-bottom: 1vh;
+        margin-top: 5vh;
+    }
+
+    .comments_container .comment_list .single_comment_container .comment_bar .btn {
+        background-color: transparent;
+        width: fit-content;
+
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
+        border-radius: 0.7em;
+        border: 0.1em dashed var(--theme_dark_grey);
+        font-size: 0.8em;
+    }
+
+    .comments_container .comment_list .single_comment_container .btn{
+        height: 2em;
+    }
+
+    /* comments_delete_sure --------------------------------------------------------------------- */
+
+    .comments_delete_sure {
+        display: grid;
+        position: fixed;
+        top: 40vh;
+        background-color: var(--theme_blue);
+        color: var(--theme_grey);
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        border-radius: 1em;
+        padding: 1em;
+        row-gap: 4vh;
+        box-shadow: var(--msg_box_shadow);
+        transition: var(--msg_box_transition);
+
+        opacity: 0;
+        z-index: -100;
+    }
+
+    .comments_delete_sure .message{
+        font-size: 2em;
+    }
+
+    .comments_delete_sure .delete {
+        border: 0.1em dashed var(--theme_pink);
+        color: var(--theme_pink);
+    }
+
+    .comments_delete_sure .cancel {
+        border: 0.1em dashed var(--theme_grey);
+        color: var(--theme_grey);
+    }
+
+    .comments_delete_sure .delete,
+    .comments_delete_sure .cancel {
+        display: grid;
+        background-color: var(--msg_box_button_background_color);
+        font-size: 2em;
+        padding: var(--msg_box_button_padding);
+        border-radius: var(--msg_box_button_border_radius);
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* comments_report_box --------------------------------------------------------------------- */
+
+    .comments_report_box{
+        display: grid;
+        position: fixed;
+        top: 10vh;
+        background-color: var(--theme_blue);
+        color: var(--theme_grey);
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        border-radius: 1em;
+        padding: 1em;
+        row-gap: 4vh;
+        box-shadow: var(--msg_box_shadow);
+        transition: var(--msg_box_transition);
+
+        opacity: 0;
+        z-index: -100;
+    }
+
+    .comments_report_box .send {
+        border: 0.1em dashed var(--theme_pink);
+        color: var(--theme_pink);
+    }
+
+    .comments_report_box .cancel {
+        border: 0.1em dashed var(--theme_grey);
+        color: var(--theme_grey);
+    }
+
+    .comments_report_box .send,
+    .comments_report_box .cancel {
+        display: grid;
+        background-color: var(--msg_box_button_background_color);
+        font-size: 2em;
+        padding: var(--msg_box_button_padding);
+        border-radius: var(--msg_box_button_border_radius);
+        justify-content: center;
+        width: 100%;
+    }
+
+    .comments_report_box .message{
+        font-size: 2em;
+    }
+
+    .comments_report_box .report_text {
+        border-radius: var(--msg_box_button_border_radius);
+        font-size: 1.5em;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        height: 40vh;
+        background-color: var(--theme_grey);
+    }
+
+    /* .comment_pages ---------------------------------------------------*/
+
+    .comment_pages {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-top: 2vh;
+        font-size: 1.5em;
+        color: black;
+    }
+
+    .comment_pages .page{
+        display: grid;
+        background-color: transparent;
+        width: fit-content;
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        border-radius: 0.5em;
+        border: 0.1em dashed var(--theme_dark_grey);
+        
+    }
+
+    .comment_pages .page.next {
+        justify-self: end;
+    }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Horizontal                                                                                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (orientation: landscape ){
+    .comments_container{
+        position: fixed;
+        width: 50vw;
+        height: 80vh;
+        z-index: 100;
+        background-color: var(--theme_grey);
+        transition: var(--msg_box_transition);
+        border-radius: 1em 1em 0 0;
+        padding-top: 2vh;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        bottom: -100vh;
+    }
+    .comments_container .add_comment{
+        display: grid;
+        grid-template-areas: 
+            "comment_text comment_text"
+            "btn_close btn_send";
+        margin-bottom: 5vh;
+        column-gap: 15vw;
+    }
+
+    .comments_container .add_comment .new_comment {
+        display: grid;
+        grid-area: comment_text;
+        width: 100%;
+        border-radius: 1em;
+        padding: 2vw;
+        font-size: 1.1em;
+        border: 0.2em dashed var(--theme_pink);
+        color: var(--theme_pink);
+        background-color: var(--theme_light_grey);
+    }
+
+    .comments_container .add_comment .btn_send,
+    .comments_container .add_comment .btn_close {
+        display: grid;
+        border: 0.2em dashed var(--theme_pink);
+        margin-top: 1vh;
+        justify-content: center;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        border-radius: 1em;
+        color: var(--theme_pink);
+    }
+
+    .comments_container .add_comment .btn_send{
+        grid-area: btn_send;
+    }
+
+    .comments_container .add_comment .btn_close{
+        grid-area: btn_close;
+    }
+
+    .comments_container .comment_list {
+        display: grid;
+        row-gap: 1vh;
+
+        overflow-y: auto;
+        height: fit-content;
+        max-height: 70%;
+        margin-bottom: 1.5vh;
+        overflow-x: clip;
+    }
+
+    .comments_container .comment_list .single_comment_container {
+        position: relative;
+        border-bottom: 0.2em solid var(--theme_dark_grey);
+        border-radius: 1em;
+        padding-bottom: 4vh;
+        height: fit-content;       /* TODO Firefox incompatible */
+        height: -moz-fit-content;  /* TODO Firefox works? */
+    }
+
+    .comments_container .comment_list .single_comment_container .commenter_pfp{
+        position: absolute;
+        top: 0.4em;
+        left: 0.4em;
+
+        width:5vw;
+        height: 5vw;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    .comments_container .comment_list .single_comment_container .commenter_username{
+        position: absolute;
+        top: 0.4em;
+        left: 0.4em;
+
+        width: fit-content;
+        margin-left: 15vw;
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
+        padding-left: 1.5vw;
+        padding-right: 1.5vw;
+        border-radius: 0.5em;
+
+        background-color: var(--theme_dark_grey);
+    }
+
+    .comments_container .comment_list .single_comment_container .OP{
+        position: absolute;
+        top: 0.4vh;
+        left: 0;
+        font-size: 0.7em;
+        background-color: var(--theme_pink);
+        color: var(--theme_grey);
+        padding: 0.1em;
+        border-radius: 0.3em;
+
+        z-index: 1;
+
+    }
+
+    .comments_container .comment_list .single_comment_container .comment_remove{
+        position: absolute;
+        top: 0.4em;
+        right: 0.4em;
+
+        width: 5vw;
+        border-radius: 50%;
+
+    }
+
+    .comments_container .comment_list .single_comment_container .comment_bar{
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        position: absolute;
+        width: 87%;
+        justify-content:center;
+        column-gap: 3vw;
+    }
+
+
+    .comments_container .comment_list .single_comment_container .comment_text {
+        margin-left: 7vw;
+        margin-right: 1vw;
+        margin-bottom: 1vh;
+        margin-top: 5vh;
+    }
+
+    .comments_container .comment_list .single_comment_container .comment_bar .btn {
+        background-color: transparent;
+        width: fit-content;
+
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
+        border-radius: 0.7em;
+        border: 0.1em dashed var(--theme_dark_grey);
+        font-size: 0.8em;
+    }
+
+    .comments_container .comment_list .single_comment_container .btn{
+        height: 2em;
+    }
+
+    /* comments_delete_sure --------------------------------------------------------------------- */
+
+    .comments_delete_sure {
+        display: grid;
+        position: fixed;
+        top: 40vh;
+        background-color: var(--theme_blue);
+        color: var(--theme_grey);
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        border-radius: 1em;
+        padding: 1em;
+        row-gap: 4vh;
+        box-shadow: var(--msg_box_shadow);
+        transition: var(--msg_box_transition);
+
+        opacity: 0;
+        z-index: -100;
+    }
+
+    .comments_delete_sure .message{
+        font-size: 2em;
+    }
+
+    .comments_delete_sure .delete {
+        border: 0.1em dashed var(--theme_pink);
+        color: var(--theme_pink);
+    }
+
+    .comments_delete_sure .cancel {
+        border: 0.1em dashed var(--theme_grey);
+        color: var(--theme_grey);
+    }
+
+    .comments_delete_sure .delete,
+    .comments_delete_sure .cancel {
+        display: grid;
+        background-color: var(--msg_box_button_background_color);
+        font-size: 2em;
+        padding: var(--msg_box_button_padding);
+        border-radius: var(--msg_box_button_border_radius);
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* comments_report_box --------------------------------------------------------------------- */
+
+    .comments_report_box{
+        display: grid;
+        position: fixed;
+        top: 10vh;
+        background-color: var(--theme_blue);
+        color: var(--theme_grey);
+        width: 40vw;
+        margin-left: 5%;
+        margin-right: 5%;
+        border-radius: 1em;
+        padding: 1em;
+        row-gap: 4vh;
+        box-shadow: var(--msg_box_shadow);
+        justify-content: center;
+        transition: var(--msg_box_transition);
+
+        opacity: 0;
+        z-index: -100;
+    }
+
+    .comments_report_box .send {
+        border: 0.1em dashed var(--theme_pink);
+        color: var(--theme_pink);
+    }
+
+    .comments_report_box .cancel {
+        border: 0.1em dashed var(--theme_grey);
+        color: var(--theme_grey);
+    }
+
+    .comments_report_box .send,
+    .comments_report_box .cancel {
+        display: grid;
+        background-color: var(--msg_box_button_background_color);
+        font-size: 2em;
+        padding: var(--msg_box_button_padding);
+        border-radius: var(--msg_box_button_border_radius);
+        justify-content: center;
+        width: 100%;
+    }
+
+    .comments_report_box .message{
+        font-size: 2em;
+    }
+
+    .comments_report_box .report_text {
+        border-radius: var(--msg_box_button_border_radius);
+        font-size: 1.5em;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        height: 40vh;
+        background-color: var(--theme_grey);
+    }
+
+    /* .comment_pages ---------------------------------------------------*/
+
+    .comment_pages {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-top: 2vh;
+        font-size: 1.5em;
+        color: black;
+    }
+
+    .comment_pages .page{
+        display: grid;
+        background-color: transparent;
+        width: fit-content;
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        border-radius: 0.5em;
+        border: 0.1em dashed var(--theme_dark_grey);
+        
+    }
+
+    .comment_pages .page.next {
+        justify-self: end;
+    }
+}

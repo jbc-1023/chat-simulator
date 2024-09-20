@@ -1,0 +1,335 @@
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Vertical                                                                                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (orientation: portrait ){  
+    /* ******************************************************************
+    Login
+    *********************************************************************/
+    .login_container {
+        display: grid;
+        margin-top: 10vh;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        font-size: 1.5em;
+    }
+
+    .login_container form {
+        display: grid;
+        row-gap: 3vh;
+        column-gap: 1vh;
+        margin-bottom: 20vh;
+    }
+
+    .login_container label {
+        justify-self: end;
+        align-self: center;
+    }
+
+    .login_container input::placeholder {
+        text-align: center;
+    }
+
+    .login_container input, 
+    .login_container button, 
+    .login_container a {
+        font-size: 1.5em;
+        width: 100%;
+        padding: 1vh;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+        color: var(--theme_pink);
+        background-color: var(--msg_box_button_background_color);
+        border-radius: var(--msg_box_border_radius);
+    }
+
+    .login_container input, 
+    .login_container a {
+        border: var(--msg_box_button_border);
+        text-align: center;
+    } 
+
+    .login_container button {
+        border: 0.1em dashed var(--theme_pink);
+    }
+
+    .login_container .register,
+    .login_container .forgot,
+    .login_container .back {
+        background-color: black;
+        border: 0.1em dashed var(--theme_blue);
+    }
+
+    /* ******************************************************************
+    Registration
+    *********************************************************************/
+
+    .register_container {
+        display: grid;
+        padding-top: 10vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-bottom: 10vh;
+        font-size: 1.5em;
+    }
+
+    .register_container form {
+        display: grid;
+        row-gap: 2vh;
+        column-gap: 1vh;
+    }
+
+    .register_container label {
+        justify-self: end;
+        align-self: center;
+    }
+
+    .register_container input::placeholder {
+        text-align: center;
+    }
+
+    .register_container input, 
+    .register_container button, 
+    .register_container a {
+        font-size: 1.5em;
+        width: 100%;
+        border: var(--msg_box_button_border);
+        background-color: transparent;
+        border-radius: var(--msg_box_button_border_radius);
+        padding: 1vh;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+        color: white;
+    }
+
+    .register_container a {
+        background-color: rgb(107, 107, 107);
+        text-align: center;
+    }
+
+    .register_container .login_status {
+        color: rgb(115, 23, 23);
+        font-weight: bold;
+    }
+
+    .register_container .message,
+    .register_container .message a,
+    .register_container .message a:visited {
+        font-size: 1em;
+        color: var(--theme_pink);
+        border: none;
+    }
+
+    .register_container .message a {
+        background-color: transparent;
+        box-shadow: 0 0 0 #0000;
+        color:rgb(115, 23, 23);
+    }
+
+    /* ******************************************************************
+    Alert box
+    *********************************************************************/
+
+    .alert_box {
+        display: grid;
+        position: fixed;
+        top: 30vh;
+        background-color:var(--msg_box_background_color);
+        color: var(--theme_grey);
+        padding: 10vw;
+        border-radius: 4vw;
+        width: 80%;
+        margin-left:10%;
+        margin-right:10%;
+        text-align: center;
+        font-size: 2em;
+        box-shadow: var(--msg_box_shadow);
+        z-index: -100;
+        visibility: hidden;
+    }
+
+    .login_status {
+        display: grid;
+        justify-content: center;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        background-color: transparent;
+        color: black;
+
+        transition: var(--msg_box_transition);
+    }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Horizontal                                                                                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (orientation: landscape ){
+    /* ******************************************************************
+    Login
+    *********************************************************************/
+    .login_container {
+        display: grid;
+        margin-top: 10vh;
+        font-size: 1.5em;
+    }
+
+    .login_container form {
+        display: grid;
+        width: 36vw;
+        margin-left: 32vw;
+        margin-right: 32vw;
+
+        row-gap: 5vh;
+        column-gap: 1vh;
+    }
+
+    .login_container label {
+        justify-self: end;
+        align-self: center;
+    }
+
+    .login_container input::placeholder {
+        text-align: center;
+    }
+
+    .login_container input, 
+    .login_container button, 
+    .login_container a {
+        font-size: 1.5em;
+        width: 100%;
+        padding: 1vh;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+        color: var(--theme_pink);
+        background-color: var(--msg_box_button_background_color);
+        border-radius: var(--msg_box_border_radius);
+    }
+
+    .login_container input, 
+    .login_container a {
+        border: var(--msg_box_button_border);
+        text-align: center;
+    } 
+
+    .login_container button {
+        border: 0.1em dashed var(--theme_pink);
+    }
+
+    .login_container .register,
+    .login_container .forgot,
+    .login_container .back {
+        background-color: black;
+        border: 0.1em dashed var(--theme_blue);
+    }
+
+    /* ******************************************************************
+    Registration
+    *********************************************************************/
+
+    .register_container {
+        display: grid;
+        padding-top: 10vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-bottom: 10vh;
+        font-size: 1.5em;
+    }
+
+    .register_container form {
+        display: grid;
+        width: 36vw;
+        margin-left: 32vw;
+        margin-right: 32vw;
+        row-gap: 2vh;
+        column-gap: 1vh;
+    }
+
+    .register_container label {
+        justify-self: end;
+        align-self: center;
+    }
+
+    .register_container input::placeholder {
+        text-align: center;
+    }
+
+    .register_container input, 
+    .register_container button, 
+    .register_container a {
+        font-size: 1.5em;
+        width: 100%;
+        border: var(--msg_box_button_border);
+        background-color: transparent;
+        border-radius: var(--msg_box_button_border_radius);
+        padding: 1vh;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+        color: white;
+    }
+
+    .register_container a {
+        background-color: rgb(107, 107, 107);
+        text-align: center;
+    }
+
+    .register_container .login_status {
+        color: rgb(115, 23, 23);
+        font-weight: bold;
+    }
+
+    .register_container .message,
+    .register_container .message a,
+    .register_container .message a:visited {
+        font-size: 1em;
+        color: var(--theme_pink);
+        border: none;
+    }
+
+    .register_container .message a {
+        background-color: transparent;
+        box-shadow: 0 0 0 #0000;
+        color:rgb(115, 23, 23);
+    }
+
+    /* ******************************************************************
+    Alert box
+    *********************************************************************/
+
+    .alert_box {
+        display: grid;
+        position: fixed;
+        top: 30vh;
+        background-color:var(--msg_box_background_color);
+        color: var(--theme_grey);
+        padding: 10vw;
+        border-radius: 4vw;
+        width: 80%;
+        margin-left:10%;
+        margin-right:10%;
+        text-align: center;
+        font-size: 2em;
+        box-shadow: var(--msg_box_shadow);
+        z-index: -100;
+        visibility: hidden;
+    }
+
+    .login_status {
+        display: grid;
+        justify-content: center;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        background-color: transparent;
+        color: black;
+
+        transition: var(--msg_box_transition);
+    }
+
+
+
+}

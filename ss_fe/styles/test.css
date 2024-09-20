@@ -1,0 +1,13 @@
+/* Vertical */
+@media screen and (orientation: portrait ){
+    .test{
+        background-color: black;
+    }
+}
+
+/* Horizontal */
+@media screen and (min-aspect-ratio: 1.01){
+    .test{
+        background-color: green;
+    }
+}

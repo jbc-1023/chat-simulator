@@ -1,0 +1,418 @@
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Vertical                                                                                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (orientation: portrait ){
+    .sorting{
+        display: grid;
+        margin-top: 8vh;
+        grid-template-columns: auto auto auto auto;
+
+        justify-content: center;
+
+    }
+
+    .sorting .link {
+        display: grid;
+        background-color: transparent;
+        width: fit-content;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        color: var(--theme_light_grey);
+        padding: 2vw;
+        border-radius: 1em;
+        border: 0.1em dashed var(--theme_pink);
+        font-size: 1.1em;
+    }
+
+    .sorting .link.top_viewed{
+        background-color: var(--theme_pink);
+    }
+
+
+    .results_container .single_story_container{
+        display: grid;
+        grid-template-areas: 
+            "pfp pfp username"
+            "pfp pfp story_pic"
+            "likes_image likes title"
+            "views_image views title"
+            ". . tags"
+            ;
+
+        grid-template-columns: auto auto 70vw;
+
+        border-bottom: 0.1em solid var(--theme_dark_grey);
+        margin-bottom: 4vh;
+        margin-top: 4vh;
+
+        row-gap: 1vh;
+    }
+
+    .results_container .single_story_container .story_pic img{
+        display: grid;
+        grid-area: story_pic;
+
+        width: 65vw;
+        height: 7.22222222vh;
+        object-fit: cover;
+        border: 0.1em solid var(--theme_dark_grey);
+        border-radius: 1em;
+    }
+
+    .results_container .single_story_container .title {
+        display: grid;
+        grid-area: title;
+
+        color: var(--theme_light_grey);
+        margin-top: 1vh;
+        font-size: 1.2em;
+        justify-content: start;
+        max-width: 60vw;
+        margin-bottom: 1vh;
+
+        text-decoration: none;
+
+    }
+
+    .results_container .single_story_container .username {
+        display: grid;
+        grid-area: username;
+        justify-self: start;
+        place-content: center;
+        text-decoration: none;
+        color: var(--theme_yellow);
+    }
+
+    .results_container .single_story_container .tags_container {
+        display: grid;
+        grid-area: tags;
+
+        margin-bottom: 4vh;
+    }
+
+    .results_container .single_story_container .likes_image {
+        display: grid;
+        grid-area: likes_image;
+
+        width: 7vw;
+        height: 7vw;
+
+        justify-self: end;
+        margin-right: 1vw;
+    }
+
+    .results_container .single_story_container .likes {
+        display: grid;
+        grid-area: likes;
+
+        justify-self: start;
+        margin-left: 1vw;
+        background-color: var(--theme_light_grey);
+        color: black;
+        margin-bottom: 2vh;
+        align-items: center;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        border-radius: 1em;
+        font-size: 1em;
+        justify-content: center;
+        min-width: 10vw;
+        height: 6vw;
+    }
+
+    .results_container .single_story_container .views {
+        display: grid;
+        grid-area: views;
+
+        justify-self: start;
+        margin-left: 1vw;
+        background-color: var(--theme_light_grey);
+        color: black;
+        margin-bottom: 2vh;
+        align-items: center;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        border-radius: 1em;
+        font-size: 1em;
+        justify-content: center;
+        min-width: 10vw;
+        height: 6vw;
+    }
+
+    .results_container .single_story_container .views_image {
+        display: grid;
+        grid-area: views_image;
+
+        width: 7vw;
+        height: 7vw;
+
+        justify-self: end;
+        margin-right: 1vw;
+    }
+
+    .results_container .single_story_container .userpfp_anchor {
+        display: grid;
+        grid-area: pfp;
+
+    }
+
+    .results_container .single_story_container .userpfp_img {
+        display: grid;
+        border-radius: 50%;
+        height: 7vh;
+        width: 7vh;
+        object-fit: cover;
+
+        justify-self: center;
+
+    }
+
+    .results_container  .single_story_container .tags_container .tag{
+        background: var(--theme_pink);
+        color: var(--theme_light_grey);
+        margin-left: 1vw;
+        margin-right: 1vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        border-radius: 0.5em;
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
+        line-height: 4vh;
+    }
+
+    .results_container .single_story_container_empty{
+        margin-top: 10vh;
+        font-size: 3em;
+        color: var(--theme_grey);
+        text-align: center;
+    }
+
+    .results_container .single_story_container .tags_container{
+        
+    }
+
+
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Horizontal                                                                                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (orientation: landscape ){
+    .results_container{
+        width: 50vw;
+        margin-left: 25vw;
+        margin-right: 25vw;
+    }
+
+    .sorting{
+        display: grid;
+        margin-top: 8vh;
+        grid-template-columns: auto auto auto auto;
+
+        justify-content: center;
+
+    }
+
+    .sorting .link {
+        display: grid;
+        background-color: transparent;
+        width: fit-content;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        color: var(--theme_light_grey);
+        padding: 2vh;
+        border-radius: 1em;
+        border: 0.1em dashed var(--theme_pink);
+        font-size: 1.1em;
+    }
+
+    .sorting .link.top_viewed{
+        background-color: var(--theme_pink);
+    }
+
+
+    .results_container .single_story_container{
+        display: grid;
+        grid-template-areas: 
+            "pfp pfp username"
+            "pfp pfp story_pic"
+            "likes_image likes title"
+            "views_image views title"
+            ". . tags"
+            ;
+        grid-template-columns: 10% 10% auto;
+
+        border-bottom: 0.1em solid var(--theme_dark_grey);
+        margin-bottom: 4vh;
+        margin-top: 4vh;
+
+        row-gap: 1vh;
+    }
+
+    .results_container .single_story_container .story_pic img{
+        display: grid;
+        grid-area: story_pic;
+
+        width: 100%;
+        height: 10vh;
+        object-fit: cover;
+        border: 0.1em solid var(--theme_dark_grey);
+        border-radius: 1em;
+    }
+
+    .results_container .single_story_container .title {
+        display: grid;
+        grid-area: title;
+
+        color: var(--theme_light_grey);
+        margin-top: 1vh;
+        font-size: 2em;
+        justify-content: start;
+        max-width: 60vw;
+        margin-bottom: 1vh;
+
+        text-decoration: none;
+
+    }
+
+    .results_container .single_story_container .username {
+        display: grid;
+        grid-area: username;
+        justify-self: start;
+        place-content: center;
+        text-decoration: none;
+        color: var(--theme_yellow);
+        font-size: 2em;
+    }
+
+    .results_container .single_story_container .tags_container {
+        display: grid;
+        grid-area: tags;
+
+        margin-bottom: 4vh;
+    }
+
+    .results_container .single_story_container .likes_image {
+        display: grid;
+        grid-area: likes_image;
+
+        width: 2vw;
+        height: 2vw;
+
+        object-fit: cover;
+
+        place-self: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .results_container .single_story_container .views {
+        grid-area: views;
+    }
+    .results_container .single_story_container .likes {
+        grid-area: likes;
+    }
+
+    .results_container .single_story_container .views,
+    .results_container .single_story_container .likes {
+        display: grid;
+
+        justify-self: start;
+        background-color: var(--theme_light_grey);
+        color: black;
+        align-items: center;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        border-radius: 1em;
+        font-size: 1em;
+        justify-content: center;
+        min-width: 4vw;
+        height: 100%;
+    }
+
+    .results_container .single_story_container .views_image {
+        display: grid;
+        grid-area: views_image;
+    
+        width: 2vw;
+        height: 2vw;
+    
+        place-self: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .results_container .single_story_container .userpfp_anchor {
+        display: grid;
+        grid-area: pfp;
+
+    }
+
+    .results_container .single_story_container .userpfp_img {
+        display: grid;
+        border-radius: 50%;
+        height: 9vh;
+        width: 9vh;
+        object-fit: cover;
+
+        justify-self: center;
+
+    }
+
+    .results_container  .single_story_container .tags_container .tag{
+        background: var(--theme_pink);
+        color: var(--theme_light_grey);
+        margin-left: 1vw;
+        margin-right: 1vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        border-radius: 0.5em;
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
+    }
+
+    .results_container .single_story_container_empty{
+        margin-top: 10vh;
+        font-size: 3em;
+        color: var(--theme_grey);
+        text-align: center;
+    }
+}

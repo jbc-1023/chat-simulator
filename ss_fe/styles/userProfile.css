@@ -1,0 +1,345 @@
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Vertical                                                                                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (orientation: portrait ){
+    .profile_container {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        margin-top:10vh;
+    }
+
+    .profile_container .user_name_input, 
+    .profile_container .email_input,
+    .profile_container .change_password_input {
+        display: grid;
+        width: 80%;
+        margin-left: 5%;
+        margin-right: 15%;
+        font-size: 2em;
+        padding: 1.5vh;
+        border-radius: var(--msg_box_button_border_radius);
+        border: 0;
+        color: var(--theme_blue);
+    }
+
+    .profile_container .user_name_save,
+    .profile_container .email_change,
+    .profile_container .change_password {
+        width: 28%;
+        margin-left: 67%;
+        margin-right: 5%;
+        margin-top: 1vh;
+        border-radius: var(--msg_box_button_border_radius);
+        font-size: 1.5em;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        position:relative;
+        top:-3vh;
+        border: var(--msg_box_button_border);
+        background-color: var(--theme_blue);
+        color: var(--msg_box_button_text_color);
+    }
+
+    .profile_container .delete_account,
+    .profile_container .logout {
+        display: grid;
+        justify-content: center;
+        color: var(--theme_pink);
+        background-color: var(--theme_blue);
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: var(--msg_box_button_margin_top);
+        margin-bottom: 20vh;
+        font-size: var(--msg_box_button_font_size);
+        padding: var(--msg_box_button_padding);
+        border: 0.1em dashed var(--theme_pink);
+        border-radius: var(--msg_box_button_border_radius);
+        text-decoration: none;
+    }
+
+    .profile_container .user_pfp {
+        border-radius: 50%;
+        height: 40vw;
+        width: 40vw;
+        margin-left: 30vw;
+        margin-right: 30vw;
+        margin-bottom: 4vh;
+        object-fit: cover;
+    }
+
+    .profile_container .lbl_uploadPFP {
+        display: grid;
+        place-self: center;
+        width: 40vw;
+        margin:auto;
+
+        position: relative;
+        top: -5vh;
+
+        font-size: 1.5em;
+        padding: 2vw;
+        
+        background-color: var(--msg_box_background_color);
+        color: var(--msg_box_button_text_color);
+
+        border: var(--msg_box_button_border);
+        border-radius: var(--msg_box_button_border_radius);
+
+        box-shadow: none;
+        text-align: center;
+        place-self: center;
+
+        z-index: 1;
+    }
+
+    .profile_container .uploadPFP {
+        display: none;
+    }
+
+    .delete_account_sure {
+        display: grid;
+        grid-template-areas: 
+        "message message"
+        "yes no";    
+        column-gap: 20%;
+
+        position: fixed;
+        top: 40vh;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding: 2vh;
+        border-radius: 0.5em;
+        box-shadow: 0 0 5px 3px black;
+        background-color:azure;
+
+        opacity: 0;
+        z-index: -100;
+        transition: 0.6s;
+    }
+
+    .delete_account_sure .message {
+        display: grid;
+        grid-area: message;
+
+        font-size: 2em;
+        color: black;
+
+    }
+
+    .delete_account_sure .yes,
+    .delete_account_sure .no {
+        display: grid;
+        font-size: 1em;
+        justify-content: center;
+        padding: 1vh;
+        border-radius: 0.5em;
+    }
+
+    .delete_account_sure .yes {
+        grid-area: yes;
+        background-color: red;
+        color: white;
+        
+
+    }
+
+    .delete_account_sure .no {
+        grid-area: no;
+        color: black;
+        background-color: grey;
+    }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Horizontal                                                                                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (orientation: landscape ){
+    .profile_container {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        margin-top:10vh;
+    }
+
+    .profile_container .user_name_input, 
+    .profile_container .email_input,
+    .profile_container .change_password_input {
+        display: grid;
+        width: 20vw;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 2em;
+        padding: 1.5vh;
+        border-radius: var(--msg_box_button_border_radius);
+        border: 0;
+        color: var(--theme_blue);
+    }
+
+    .profile_container .user_name_save,
+    .profile_container .email_change,
+    .profile_container .change_password {
+        width: 6vw;
+        margin-left: 56vw;
+        margin-top: 1vh;
+        border-radius: var(--msg_box_button_border_radius);
+        font-size: 1.5em;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        position:relative;
+        top:-3vh;
+        border: var(--msg_box_button_border);
+        background-color: var(--theme_blue);
+        color: var(--msg_box_button_text_color);
+    }
+
+    .profile_container .delete_account,
+    .profile_container .logout {
+        display: grid;
+        justify-content: center;
+        color: var(--theme_pink);
+        background-color: var(--theme_blue);
+        width: 20vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: var(--msg_box_button_margin_top);
+        margin-bottom: 20vh;
+        font-size: var(--msg_box_button_font_size);
+        padding: var(--msg_box_button_padding);
+        border: 0.1em dashed var(--theme_pink);
+        border-radius: var(--msg_box_button_border_radius);
+        text-decoration: none;
+    }
+
+    .profile_container .user_pfp {
+        border-radius: 50%;
+        height: 13vw;
+        width: 13vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 4vh;
+        object-fit: cover;
+    }
+
+    .profile_container .lbl_uploadPFP {
+        display: grid;
+        width: 20vw;
+        margin:auto;
+
+        position: relative;
+        top: -5vh;
+
+        font-size: 1.5em;
+        padding: 1vw;
+        
+        background-color: var(--msg_box_background_color);
+        color: var(--msg_box_button_text_color);
+
+        border: var(--msg_box_button_border);
+        border-radius: var(--msg_box_button_border_radius);
+
+        box-shadow: none;
+        text-align: center;
+        place-self: center;
+
+        z-index: 1;
+    }
+
+    .profile_container .uploadPFP {
+        display: none;
+    }
+
+    .delete_account_sure {
+        display: grid;
+        grid-template-areas: 
+        "message message"
+        "yes no";    
+        column-gap: 20%;
+
+        position: fixed;
+        top: 40vh;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding: 2vh;
+        border-radius: 0.5em;
+        box-shadow: 0 0 5px 3px black;
+        background-color:azure;
+
+        opacity: 0;
+        z-index: -100;
+        transition: 0.6s;
+    }
+
+    .delete_account_sure .message {
+        display: grid;
+        grid-area: message;
+
+        font-size: 2em;
+        color: black;
+
+    }
+
+    .delete_account_sure .yes,
+    .delete_account_sure .no {
+        display: grid;
+        font-size: 1em;
+        justify-content: center;
+        padding: 1vh;
+        border-radius: 0.5em;
+    }
+
+    .delete_account_sure .yes {
+        grid-area: yes;
+        background-color: red;
+        color: white;
+        
+
+    }
+
+    .delete_account_sure .no {
+        grid-area: no;
+        color: black;
+        background-color: grey;
+    }
+}
